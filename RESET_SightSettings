@@ -1,0 +1,24 @@
+#CLASS 0
+$CLASS = "Tools|Sight|Settings"
+
+#TR Sight_NoEaglesight {({@Messages_Eaglesight_Off})} {
+#VAR Eaglesight {} {} VAR
+#SW ((@NeedES) && (%1="You do not have the energy to extend your sight.")) {
+#VAR NeedES {1} {} VAR
+ActionAdd "Sight ON"
+HealMe
+} (@NeedES) {ES}
+} $CLASS
+
+#TR Sight_Eaglesight {{@Messages_Eaglesight}} {
+#VAR Eaglesight {1} {} VAR
+#VAR NeedES {} {} VAR
+} $CLASS
+
+#TR NeedEaglesight {{@Messages_Eaglesight}} {
+#T- NeedEaglesight
+ActionNext
+} $CLASS
+
+#T- NeedEaglesight
+#CLASS 0
