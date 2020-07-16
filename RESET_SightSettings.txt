@@ -1,4 +1,4 @@
-#CLASS 0
+//RESET_SightSettings#CLASS 0#AL RESET_SightSettings {#CLASS 0
 $CLASS = "Tools|Sight|Settings"
 
 #TR Sight_NoEaglesight {({@Messages_Eaglesight_Off})} {
@@ -21,4 +21,4 @@ ActionNext
 } $CLASS
 
 #T- NeedEaglesight
-#CLASS 0
+#CLASS 0} _Sight#CLASS 0

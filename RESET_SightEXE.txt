@@ -1,4 +1,4 @@
-#CLASS 0
+//RESET_SightEXE#CLASS 0#AL RESET_SightEXE {#CLASS 0
 $CLASS = "Tools|Sight|EXE"
 #AL Sight {
 #SW (%lower(%0)=%lower("on")) {
@@ -13,4 +13,4 @@ $CLASS = "Tools|Sight|EXE"
   ActionNext
 }
 } $CLASS
-#CLASS 0
+#CLASS 0} _Sight#CLASS 0

@@ -1,4 +1,4 @@
-#CLASS 0
+//RESET_SightVariables#CLASS 0#AL RESET_SightVariables {#CLASS 0
 #VAR NeedES {} {} VAR
 #VAR Eaglesight {} {} VAR
 
@@ -54,4 +54,4 @@
 #FORALL @Messages_Sight_On {#ADDI Messages_Sight_All %i}
 #FORALL @Messages_Sight_Off {#ADDI Messages_Sight_All %i}
 
-#CLASS 0
+#CLASS 0} _Sight#CLASS 0
