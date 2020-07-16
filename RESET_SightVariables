@@ -1,0 +1,57 @@
+#CLASS 0
+#VAR NeedES {} {} VAR
+#VAR Eaglesight {} {} VAR
+
+#VAR Messages_Sight {} {} VAR
+#ADDI Messages_Sight "You are extending your vision."
+#ADDI Messages_Sight "You already possess extended sight."
+#ADDI Messages_Sight "You summon the forces of nature to extend your sight."
+#ADDI Messages_Sight "You attune yourself to the Dark Lord's power, extending your eyesight"
+#ADDI Messages_Sight "Your eyes ache from the strain of maintaining your enhanced vision"
+#ADDI Messages_Sight "The effort of staying in tune with the Dark Lord is taking its toll on you"
+
+#VAR Messages_Eaglesight {} {} VAR
+#ADDI Messages_Eaglesight "You are extending your vision."
+#ADDI Messages_Eaglesight "You already possess extended sight."
+#ADDI Messages_Eaglesight "You summon the forces of nature to extend your sight."
+#ADDI Messages_Eaglesight "You attune yourself to the Dark Lord's power, extending your eyesight"
+#ADDI Messages_Eaglesight "Your eyes ache from the strain of maintaining your enhanced vision"
+#ADDI Messages_Eaglesight "The effort of staying in tune with the Dark Lord is taking its toll on you"
+
+#VAR Messages_Eaglesight_Off {} {} VAR
+#ADDI Messages_Eaglesight_Off "You shake your head to return your vision to normal."
+#ADDI Messages_Eaglesight_Off "You relinquish the Dark Lord's power and your vision returns to normal."
+#ADDI Messages_Eaglesight_Off "You are not extending your vision presently."
+#ADDI Messages_Eaglesight_Off "You fail to convince the powers of nature to give you extended sight."
+#ADDI Messages_Eaglesight_Off "You try to attune yourself to the Dark Lord, but are unsuccessful."
+#ADDI Messages_Eaglesight_Off "You do not have the energy to extend your sight."
+
+#VAR Messages_Crystal_Light {} {} VAR
+#ADDI Messages_Crystal_Light "You hold the crystal in the palm of your hand and it starts to glow."
+#ADDI Messages_Crystal_Light "The crystal is already glowing warmly."
+#ADDI Messages_Crystal_Light "You wrap the crystal in your hands"
+#ADDI Messages_Crystal_Light "You hold the crystal and it ignites in fiery red."
+#ADDI Messages_Crystal_Light "The crystal is already glowing."
+#ADDI Messages_Crystal_Light "You tap the crystal with your fist and it starts to glow."
+#ADDI Messages_Crystal_Light "The crystal already glows with a red flame."
+#ADDI Messages_Crystal_Light "You rub the crystal a few times, and it starts to glow."
+
+#VAR Messages_Crystal_Light_Off {} {} VAR
+#ADDI Messages_Crystal_Light_Off "You touch the crystal gently, and the glow dies."
+#ADDI Messages_Crystal_Light_Off "You hold the crystal away from your body"
+#ADDI Messages_Crystal_Light_Off "You flick the crystal with your finger, and the glow dies."
+#ADDI Messages_Crystal_Light_Off "You tap on the crystal a few times, and its light fades."
+
+#VAR Messages_Sight_On {} {} VAR
+#FORALL @Messages_Eaglesight {#ADDI Messages_Sight_On %i}
+#FORALL @Messages_Crystal_Light {#ADDI Messages_Sight_On %i}
+
+#VAR Messages_Sight_Off {} {} VAR
+#FORALL @Messages_Eaglesight_Off {#ADDI Messages_Sight_Off %i}
+#FORALL @Messages_Crystal_Light_Off {#ADDI Messages_Sight_Off %i}
+
+#VAR Messages_Sight_All {} {} VAR
+#FORALL @Messages_Sight_On {#ADDI Messages_Sight_All %i}
+#FORALL @Messages_Sight_Off {#ADDI Messages_Sight_All %i}
+
+#CLASS 0
