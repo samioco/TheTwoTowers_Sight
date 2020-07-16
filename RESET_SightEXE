@@ -1,0 +1,16 @@
+#CLASS 0
+$CLASS = "Tools|Sight|EXE"
+#AL Sight {
+#SW (%lower(%0)=%lower("on")) {
+  #VAR NeedES {1} {} VAR
+  #T+ NeedEaglesight
+  ClassOn Sight
+  ES
+} (%lower(%0)=%lower("off")) {
+  #VAR NeedES {} {} VAR
+  #T- NeedEaglesight
+  ES Off
+  ActionNext
+}
+} $CLASS
+#CLASS 0
